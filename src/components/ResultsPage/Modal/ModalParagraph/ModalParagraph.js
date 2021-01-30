@@ -17,6 +17,9 @@ scrollbar-width:none;
 @media(min-width:640px) {
     font-size:${({ theme }) => theme.fontSize.s};
 }
+@media(min-width:1000px) {
+    height: 400px;
+}
 & span {
     color:${({ theme }) => theme.colors.secondary};
 }

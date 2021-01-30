@@ -5,6 +5,7 @@ import debounce from 'lodash.debounce';
 import axios from 'axios';
 import ResultPage from './ResultPage';
 import { motion } from "framer-motion"
+import Background from '../Background/Background';
 
 const App = ({ theme }) => {
     console.log(theme);
@@ -25,21 +26,38 @@ const App = ({ theme }) => {
                 .catch((err) => console.log(err))
         });
     }
+    const handleLogoClick = () => {
+        setResults([null]);
+        setInputValue('');
+    }
     return (
         <>
             {results[0] === null ? (
                 <>
-                    <SearchPage />
-                    <Input
-                        value={inputValue}
-                        onChange={submitInputChange}
-                        placeholder="e.g. sun"
-                    />
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                    >
+                        <Background>
+                            <motion.div
+                                initial={{ y: -600 }}
+                                animate={{ y: 0 }}
+                            >
+                                <SearchPage />
+                            </motion.div>
+                            <Input
+                                value={inputValue}
+                                onChange={submitInputChange}
+                                placeholder="e.g. sun"
+                            />
+                        </Background>
+                    </motion.div>
                 </>
             ) : (
                     <>
                         <ResultPage
                             results={results}
+                            onClick={handleLogoClick}
                         >
                             <motion.div
                                 animate={{ y: 30 }}
