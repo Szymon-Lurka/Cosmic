@@ -3,7 +3,6 @@ import Background from '../Background/Background';
 import styled from 'styled-components';
 import Heading from '../MainPage/Heading/Heading';
 import Paragraph from '../MainPage/Paragraph/Paragraph';
-import Input from '../Input/Input';
 
 const StyledWrapper = styled.div`
 display:flex;
