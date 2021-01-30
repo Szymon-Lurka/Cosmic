@@ -6,7 +6,8 @@ import axios from 'axios';
 import ResultPage from './ResultPage';
 import { motion } from "framer-motion"
 
-const App = () => {
+const App = ({ theme }) => {
+    console.log(theme);
     const [inputValue, setInputValue] = useState('');
     const [results, setResults] = useState([null]);
 
@@ -52,6 +53,7 @@ const App = () => {
                                 />
                             </motion.div>
                         </ResultPage>
+
                     </>
                 )}
 

@@ -7,11 +7,12 @@ height: 350px;
 background: url(${({ image }) => image}) no-repeat center;
 background-position: center;
 background-size:cover;
+cursor:pointer;
 `;
 
-const ResultImage = ({ image }) => {
+const ResultImage = ({ image, onClick }) => {
     return (
-        <StyledImage image={image} />
+        <StyledImage image={image} onClick={onClick} />
     );
 }
 
