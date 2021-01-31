@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
-import SearchPage from './SearchPage';
-import Input from '../Input/Input';
+import { motion } from "framer-motion"
 import debounce from 'lodash.debounce';
 import axios from 'axios';
-import ResultPage from './ResultPage';
-import { motion } from "framer-motion"
 import Background from '../Background/Background';
+import Input from '../Input/Input';
+import SearchPage from './SearchPage';
+import ResultPage from './ResultPage';
 
 const App = ({ theme }) => {
     console.log(theme);

@@ -20,6 +20,6 @@ margin-top: 100px;
 }
 `;
 export const StyledLogoWrapper = styled.div`
-margin: 0 auto;
+margin: 0 auto 20px;
 cursor:pointer;
 `;
